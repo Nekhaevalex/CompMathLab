@@ -1,0 +1,520 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23027,        510]
+NotebookOptionsPosition[     21902,        485]
+NotebookOutlinePosition[     22245,        500]
+CellTagsIndexPosition[     22202,        497]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"formula", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["e", "3"], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "X"}], ")"}], "4"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "0"], "Y"}]}], ")"}], "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox["X", "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"X", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "3"], "Y"}]}], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "0"], "Y"}]}], ")"}], "2"]}], "-", 
+    RowBox[{"2", 
+     SubscriptBox["e", "0"], 
+     SubscriptBox["e", "3"], "X", 
+     RowBox[{"(", 
+      RowBox[{"X", "+", 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "3"], "Y"}]}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "0"], "Y"}]}], ")"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "X"}], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "1"}], ")"}], "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["e", "0"], "2"], 
+     SuperscriptBox["X", "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"X", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "3"], "Y"}]}], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "1"}], ")"}], "4"]}], "-", 
+    RowBox[{"2", 
+     SubscriptBox["e", "3"], "X", 
+     RowBox[{"(", 
+      RowBox[{"X", "+", 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "3"], "Y"}]}], ")"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "0"], "Y"}]}], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "X"}], ")"}], "2"]}], "-", 
+    RowBox[{"2", 
+     SubscriptBox["e", "0"], 
+     SuperscriptBox["X", "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"X", "+", 
+        RowBox[{
+         SubscriptBox["\[Alpha]", "3"], "Y"}]}], ")"}], "2"], 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        SubscriptBox["\[Alpha]", "0"], "Y"}]}], ")"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Y", "-", "1"}], ")"}], "2"]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7454139217626724`*^9, 3.745414168441059*^9}, {
+  3.745414349658931*^9, 3.7454143806619277`*^9}, {3.7454144335196486`*^9, 
+  3.745414436867697*^9}, {3.7454145418612113`*^9, 3.74541455212473*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"3ae446b1-9296-427f-9616-04b73f6ec49c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
+   RowBox[{"i", "\[LessEqual]", "6"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"alpha", " ", "=", " ", 
+     RowBox[{"Coefficient", "[", 
+      RowBox[{"formula", ",", "Y", ",", "i"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"alpha", "/.", 
+      RowBox[{
+       SubscriptBox["e", "3"], "\[Rule]", " ", "e3"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"alpha", "/.", 
+      RowBox[{
+       SubscriptBox["e", "0"], "\[Rule]", "e0"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"alpha", "/.", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "3"], "\[Rule]", " ", "alpha3"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"alpha", "/.", 
+      RowBox[{
+       SubscriptBox["\[Alpha]", "0"], "\[Rule]", " ", "alpha0"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"CForm", "[", 
+      RowBox[{"Simplify", "[", "alpha", "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"alpha", "=", 
+     RowBox[{"alpha", "/.", 
+      RowBox[{"Power", "\[Rule]", " ", "powf"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<float a\>\"", ",", 
+      RowBox[{"6", "-", "i"}], ",", "\"\< = \>\"", ",", "alpha", ",", 
+      "\"\<;\>\""}], "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.745414558384019*^9, 3.745414591893825*^9}, {
+  3.745414646323347*^9, 3.745414647477249*^9}, {3.74541468459903*^9, 
+  3.7454148487017727`*^9}, {3.7454148835649385`*^9, 3.7454149877438383`*^9}, {
+  3.7454150937258587`*^9, 3.745415131348305*^9}, {3.7454152650866613`*^9, 
+  3.745415265160453*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"ec4eae49-ba2a-42dd-9260-3cd6181e257d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"(-2*e0*(1 + e3) + powf(e0,2) + powf(-1 + \
+e3,2))*powf(X,4)\"\>",
+    CForm[((-2) $CellContext`e0 (
+        1 + $CellContext`e3) + $CellContext`powf[$CellContext`e0, 
+        2] + $CellContext`powf[-1 + $CellContext`e3, 
+        2]) $CellContext`powf[$CellContext`X, 4]],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 6, " = ", 
+   CForm[((-2) $CellContext`e0 (
+       1 + $CellContext`e3) + $CellContext`powf[$CellContext`e0, 
+       2] + $CellContext`powf[-1 + $CellContext`e3, 
+       2]) $CellContext`powf[$CellContext`X, 4]], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.74541526586058*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"857039f6-126a-4672-9a68-f83a376fdf0a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"-2*((-1 + e0)*(alpha0 + 2*e0)*X + e3*(-2 + \
+2*alpha0*X + e0*(-2 + (-2 + alpha0)*X)) + alpha3*(-1 + e3 + e0*(2 + e3) - \
+powf(e0,2)) + (2 - alpha0*X)*powf(e3,2))*powf(X,3)\"\>",
+    CForm[(-2) ((-1 + $CellContext`e0) ($CellContext`alpha0 + 
+        2 $CellContext`e0) $CellContext`X + $CellContext`e3 (-2 + 
+        2 $CellContext`alpha0 $CellContext`X + $CellContext`e0 (-2 + (-2 + \
+$CellContext`alpha0) $CellContext`X)) + $CellContext`alpha3 (-1 + \
+$CellContext`e3 + $CellContext`e0 (
+          2 + $CellContext`e3) - $CellContext`powf[$CellContext`e0, 2]) + (
+        2 - $CellContext`alpha0 $CellContext`X) \
+$CellContext`powf[$CellContext`e3, 2]) $CellContext`powf[$CellContext`X, 3]],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 5, " = ", 
+   CForm[(-2) ((-1 + $CellContext`e0) ($CellContext`alpha0 + 
+       2 $CellContext`e0) $CellContext`X + $CellContext`e3 (-2 + 
+       2 $CellContext`alpha0 $CellContext`X + $CellContext`e0 (-2 + (-2 + \
+$CellContext`alpha0) $CellContext`X)) + $CellContext`alpha3 (-1 + \
+$CellContext`e3 + $CellContext`e0 (
+         2 + $CellContext`e3) - $CellContext`powf[$CellContext`e0, 2]) + (
+       2 - $CellContext`alpha0 $CellContext`X) \
+$CellContext`powf[$CellContext`e3, 2]) $CellContext`powf[$CellContext`X, 3]], 
+   ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.7454152658665648`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"837cc1ec-9849-459a-b4b2-608e20604ec3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"powf(X,2)*(alpha3*(-4*(-1 + e0)*(alpha0 + 2*e0)*X + \
+e3*(4 - 4*alpha0*X + e0*(4 + 4*X - 2*alpha0*X))) + powf(alpha3,2)*powf(-1 + \
+e0,2) + (4*alpha0*e0 + 2*e0*(-1 + 3*e0) + powf(alpha0,2))*powf(X,2) + \
+powf(e3,2)*(6 - 8*alpha0*X + powf(alpha0,2)*powf(X,2)) - 2*e3*(1 + e0 - \
+4*alpha0*X - 2*(-2 + alpha0)*e0*X + (1 - 2*alpha0)*e0*powf(X,2) + \
+powf(alpha0,2)*powf(X,2)))\"\>",
+    CForm[$CellContext`powf[$CellContext`X, 
+       2] ($CellContext`alpha3 ((-4) (-1 + $CellContext`e0) \
+($CellContext`alpha0 + 2 $CellContext`e0) $CellContext`X + $CellContext`e3 (4 - 
+          4 $CellContext`alpha0 $CellContext`X + $CellContext`e0 (4 + 
+            4 $CellContext`X - 
+            2 $CellContext`alpha0 $CellContext`X))) + \
+$CellContext`powf[$CellContext`alpha3, 
+         2] $CellContext`powf[-1 + $CellContext`e0, 2] + (
+        4 $CellContext`alpha0 $CellContext`e0 + 
+        2 $CellContext`e0 (-1 + 
+          3 $CellContext`e0) + $CellContext`powf[$CellContext`alpha0, 
+          2]) $CellContext`powf[$CellContext`X, 
+         2] + $CellContext`powf[$CellContext`e3, 2] (6 - 
+        8 $CellContext`alpha0 $CellContext`X + \
+$CellContext`powf[$CellContext`alpha0, 2] $CellContext`powf[$CellContext`X, 
+           2]) - 2 $CellContext`e3 (1 + $CellContext`e0 - 
+       4 $CellContext`alpha0 $CellContext`X - 
+       2 (-2 + $CellContext`alpha0) $CellContext`e0 $CellContext`X + (1 - 
+         2 $CellContext`alpha0) $CellContext`e0 \
+$CellContext`powf[$CellContext`X, 2] + $CellContext`powf[$CellContext`alpha0, 
+          2] $CellContext`powf[$CellContext`X, 2]))],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 4, " = ", 
+   CForm[$CellContext`powf[$CellContext`X, 
+      2] ($CellContext`alpha3 ((-4) (-1 + $CellContext`e0) \
+($CellContext`alpha0 + 2 $CellContext`e0) $CellContext`X + $CellContext`e3 (4 - 
+         4 $CellContext`alpha0 $CellContext`X + $CellContext`e0 (4 + 
+           4 $CellContext`X - 
+           2 $CellContext`alpha0 $CellContext`X))) + \
+$CellContext`powf[$CellContext`alpha3, 
+        2] $CellContext`powf[-1 + $CellContext`e0, 2] + (
+       4 $CellContext`alpha0 $CellContext`e0 + 
+       2 $CellContext`e0 (-1 + 
+         3 $CellContext`e0) + $CellContext`powf[$CellContext`alpha0, 
+         2]) $CellContext`powf[$CellContext`X, 
+        2] + $CellContext`powf[$CellContext`e3, 2] (6 - 
+       8 $CellContext`alpha0 $CellContext`X + \
+$CellContext`powf[$CellContext`alpha0, 2] $CellContext`powf[$CellContext`X, 
+          2]) - 2 $CellContext`e3 (1 + $CellContext`e0 - 
+      4 $CellContext`alpha0 $CellContext`X - 
+      2 (-2 + $CellContext`alpha0) $CellContext`e0 $CellContext`X + (1 - 
+        2 $CellContext`alpha0) $CellContext`e0 \
+$CellContext`powf[$CellContext`X, 2] + $CellContext`powf[$CellContext`alpha0, 
+         2] $CellContext`powf[$CellContext`X, 2]))], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.7454152658715506`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"a005e4db-5752-406b-9147-a73010ac8a24"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"-2*X*((-1 + e0)*(alpha0 + 2*e0)*X*powf(alpha3,2) + \
+2*powf(e3,2)*(1 - 3*alpha0*X + powf(alpha0,2)*powf(X,2)) + \
+alpha3*(-((4*alpha0*e0 + 2*e0*(-1 + 3*e0) + powf(alpha0,2))*powf(X,2)) + \
+e3*(1 + e0 - 4*alpha0*X - 2*(-2 + alpha0)*e0*X + (1 - 2*alpha0)*e0*powf(X,2) \
++ powf(alpha0,2)*powf(X,2))) + e3*X*(-2*e0*(1 + X) - 2*X*powf(alpha0,2) + \
+alpha0*(2 + e0*(1 + 4*X + powf(X,2)))) + e0*(alpha0 + 2*e0)*powf(X,3))\"\>",
+    CForm[(-2) $CellContext`X ((-1 + $CellContext`e0) ($CellContext`alpha0 + 
+        2 $CellContext`e0) $CellContext`X \
+$CellContext`powf[$CellContext`alpha3, 2] + 
+      2 $CellContext`powf[$CellContext`e3, 2] (1 - 
+        3 $CellContext`alpha0 $CellContext`X + \
+$CellContext`powf[$CellContext`alpha0, 2] $CellContext`powf[$CellContext`X, 
+           2]) + $CellContext`alpha3 (-(4 $CellContext`alpha0 $CellContext`e0 + 
+          2 $CellContext`e0 (-1 + 
+            3 $CellContext`e0) + $CellContext`powf[$CellContext`alpha0, 
+            2]) $CellContext`powf[$CellContext`X, 2] + $CellContext`e3 (
+          1 + $CellContext`e0 - 4 $CellContext`alpha0 $CellContext`X - 
+          2 (-2 + $CellContext`alpha0) $CellContext`e0 $CellContext`X + (1 - 
+            2 $CellContext`alpha0) $CellContext`e0 \
+$CellContext`powf[$CellContext`X, 2] + $CellContext`powf[$CellContext`alpha0, 
+             2] $CellContext`powf[$CellContext`X, 
+             2])) + $CellContext`e3 $CellContext`X ((-2) $CellContext`e0 (
+          1 + $CellContext`X) - 
+        2 $CellContext`X $CellContext`powf[$CellContext`alpha0, 
+          2] + $CellContext`alpha0 (
+          2 + $CellContext`e0 (1 + 
+            4 $CellContext`X + $CellContext`powf[$CellContext`X, 
+              2]))) + $CellContext`e0 ($CellContext`alpha0 + 
+        2 $CellContext`e0) $CellContext`powf[$CellContext`X, 3])],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 3, " = ", 
+   CForm[(-2) $CellContext`X ((-1 + $CellContext`e0) ($CellContext`alpha0 + 
+       2 $CellContext`e0) $CellContext`X \
+$CellContext`powf[$CellContext`alpha3, 2] + 
+     2 $CellContext`powf[$CellContext`e3, 2] (1 - 
+       3 $CellContext`alpha0 $CellContext`X + \
+$CellContext`powf[$CellContext`alpha0, 2] $CellContext`powf[$CellContext`X, 
+          2]) + $CellContext`alpha3 (-(4 $CellContext`alpha0 $CellContext`e0 + 
+         2 $CellContext`e0 (-1 + 
+           3 $CellContext`e0) + $CellContext`powf[$CellContext`alpha0, 
+           2]) $CellContext`powf[$CellContext`X, 2] + $CellContext`e3 (
+         1 + $CellContext`e0 - 4 $CellContext`alpha0 $CellContext`X - 
+         2 (-2 + $CellContext`alpha0) $CellContext`e0 $CellContext`X + (1 - 
+           2 $CellContext`alpha0) $CellContext`e0 \
+$CellContext`powf[$CellContext`X, 2] + $CellContext`powf[$CellContext`alpha0, 
+            2] $CellContext`powf[$CellContext`X, 
+            2])) + $CellContext`e3 $CellContext`X ((-2) $CellContext`e0 (
+         1 + $CellContext`X) - 
+       2 $CellContext`X $CellContext`powf[$CellContext`alpha0, 
+         2] + $CellContext`alpha0 (
+         2 + $CellContext`e0 (1 + 
+           4 $CellContext`X + $CellContext`powf[$CellContext`X, 
+             2]))) + $CellContext`e0 ($CellContext`alpha0 + 
+       2 $CellContext`e0) $CellContext`powf[$CellContext`X, 3])], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.7454152658755393`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"099f88e7-246e-47a3-9433-a590ca803e72"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"powf(e3,2)*(1 - 8*alpha0*X + \
+6*powf(alpha0,2)*powf(X,2)) + powf(X,2)*(4*alpha0*alpha3*e0*(alpha3 - X) + \
+powf(alpha0,2)*powf(alpha3,2) + e0*(-8*alpha3*e0*X + (-2 + \
+6*e0)*powf(alpha3,2) + e0*powf(X,2))) - 2*e3*X*(e0*X - 2*alpha3*e0*(1 + X) - \
+2*alpha0*e0*X*(1 + X) + (X - 2*alpha3*X)*powf(alpha0,2) + alpha0*alpha3*(2 + \
+e0*(1 + 4*X + powf(X,2))))\"\>",
+    CForm[$CellContext`powf[$CellContext`e3, 2] (1 - 
+       8 $CellContext`alpha0 $CellContext`X + 
+       6 $CellContext`powf[$CellContext`alpha0, 
+          2] $CellContext`powf[$CellContext`X, 
+          2]) + $CellContext`powf[$CellContext`X, 2] (
+       4 $CellContext`alpha0 $CellContext`alpha3 $CellContext`e0 \
+($CellContext`alpha3 - $CellContext`X) + \
+$CellContext`powf[$CellContext`alpha0, 
+          2] $CellContext`powf[$CellContext`alpha3, 
+          2] + $CellContext`e0 ((-8) $CellContext`alpha3 $CellContext`e0 \
+$CellContext`X + (-2 + 
+           6 $CellContext`e0) $CellContext`powf[$CellContext`alpha3, 
+            2] + $CellContext`e0 $CellContext`powf[$CellContext`X, 2])) - 
+     2 $CellContext`e3 $CellContext`X ($CellContext`e0 $CellContext`X - 
+      2 $CellContext`alpha3 $CellContext`e0 (1 + $CellContext`X) - 
+      2 $CellContext`alpha0 $CellContext`e0 $CellContext`X (
+       1 + $CellContext`X) + ($CellContext`X - 
+        2 $CellContext`alpha3 $CellContext`X) \
+$CellContext`powf[$CellContext`alpha0, 
+         2] + $CellContext`alpha0 $CellContext`alpha3 (
+        2 + $CellContext`e0 (1 + 
+          4 $CellContext`X + $CellContext`powf[$CellContext`X, 2])))],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 2, " = ", 
+   CForm[$CellContext`powf[$CellContext`e3, 2] (1 - 
+      8 $CellContext`alpha0 $CellContext`X + 
+      6 $CellContext`powf[$CellContext`alpha0, 
+         2] $CellContext`powf[$CellContext`X, 
+         2]) + $CellContext`powf[$CellContext`X, 2] (
+      4 $CellContext`alpha0 $CellContext`alpha3 $CellContext`e0 \
+($CellContext`alpha3 - $CellContext`X) + \
+$CellContext`powf[$CellContext`alpha0, 
+         2] $CellContext`powf[$CellContext`alpha3, 
+         2] + $CellContext`e0 ((-8) $CellContext`alpha3 $CellContext`e0 \
+$CellContext`X + (-2 + 
+          6 $CellContext`e0) $CellContext`powf[$CellContext`alpha3, 
+           2] + $CellContext`e0 $CellContext`powf[$CellContext`X, 2])) - 
+    2 $CellContext`e3 $CellContext`X ($CellContext`e0 $CellContext`X - 
+     2 $CellContext`alpha3 $CellContext`e0 (1 + $CellContext`X) - 
+     2 $CellContext`alpha0 $CellContext`e0 $CellContext`X (
+      1 + $CellContext`X) + ($CellContext`X - 
+       2 $CellContext`alpha3 $CellContext`X) \
+$CellContext`powf[$CellContext`alpha0, 
+        2] + $CellContext`alpha0 $CellContext`alpha3 (
+       2 + $CellContext`e0 (1 + 
+         4 $CellContext`X + $CellContext`powf[$CellContext`X, 2])))], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.74541526587953*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"9ace68a1-4d83-47cc-a939-5cdb74f2b943"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"-2*(alpha3*e0*X*(e3 + e0*(2*alpha3 - X)*X) + \
+e3*(alpha3 + 2*e3)*X*powf(alpha0,2) + alpha0*(e0*e3*X*(X - 2*alpha3*(1 + X)) \
+- powf(e3,2) + e0*powf(alpha3,2)*powf(X,2)))\"\>",
+    CForm[(-2) ($CellContext`alpha3 $CellContext`e0 $CellContext`X \
+($CellContext`e3 + $CellContext`e0 (
+          2 $CellContext`alpha3 - $CellContext`X) $CellContext`X) + \
+$CellContext`e3 ($CellContext`alpha3 + 
+        2 $CellContext`e3) $CellContext`X \
+$CellContext`powf[$CellContext`alpha0, 
+         2] + $CellContext`alpha0 ($CellContext`e0 $CellContext`e3 \
+$CellContext`X ($CellContext`X - 
+          2 $CellContext`alpha3 (
+           1 + $CellContext`X)) - $CellContext`powf[$CellContext`e3, 
+         2] + $CellContext`e0 $CellContext`powf[$CellContext`alpha3, 
+           2] $CellContext`powf[$CellContext`X, 2]))],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 1, " = ", 
+   CForm[(-2) ($CellContext`alpha3 $CellContext`e0 $CellContext`X \
+($CellContext`e3 + $CellContext`e0 (
+         2 $CellContext`alpha3 - $CellContext`X) $CellContext`X) + \
+$CellContext`e3 ($CellContext`alpha3 + 
+       2 $CellContext`e3) $CellContext`X \
+$CellContext`powf[$CellContext`alpha0, 
+        2] + $CellContext`alpha0 ($CellContext`e0 $CellContext`e3 \
+$CellContext`X ($CellContext`X - 
+         2 $CellContext`alpha3 (
+          1 + $CellContext`X)) - $CellContext`powf[$CellContext`e3, 
+        2] + $CellContext`e0 $CellContext`powf[$CellContext`alpha3, 
+          2] $CellContext`powf[$CellContext`X, 2]))], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.745415265885512*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"a5006f05-69ae-4f0d-abf6-48d237c1fbaa"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"float a\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   InterpretationBox["\<\"powf(alpha0*e3 - alpha3*e0*X,2)\"\>",
+    CForm[
+     $CellContext`powf[$CellContext`alpha0 $CellContext`e3 - \
+$CellContext`alpha3 $CellContext`e0 $CellContext`X, 2]],
+    AutoDelete->True,
+    Editable->True], "\[InvisibleSpace]", "\<\";\"\>"}],
+  SequenceForm["float a", 0, " = ", 
+   CForm[
+    $CellContext`powf[$CellContext`alpha0 $CellContext`e3 - \
+$CellContext`alpha3 $CellContext`e0 $CellContext`X, 2]], ";"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.745414805399627*^9, 3.745414821411784*^9}, {
+   3.745414875504504*^9, 3.7454149372293816`*^9}, 3.745414988050977*^9, 
+   3.745415098918954*^9, 3.7454151316195316`*^9, 3.7454152658885317`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"3c94ae83-4c1a-411d-86bc-109557724ba1"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{849, 840},
+WindowMargins->{{Automatic, 327}, {29, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2727, 88, 48, "Input",ExpressionUUID->"3ae446b1-9296-427f-9616-04b73f6ec49c"],
+Cell[CellGroupData[{
+Cell[3310, 112, 1931, 48, 290, "Input",ExpressionUUID->"ec4eae49-ba2a-42dd-9260-3cd6181e257d"],
+Cell[CellGroupData[{
+Cell[5266, 164, 1118, 23, 22, "Print",ExpressionUUID->"857039f6-126a-4672-9a68-f83a376fdf0a"],
+Cell[6387, 189, 1854, 33, 59, "Print",ExpressionUUID->"837cc1ec-9849-459a-b4b2-608e20604ec3"],
+Cell[8244, 224, 3401, 61, 95, "Print",ExpressionUUID->"a005e4db-5752-406b-9147-a73010ac8a24"],
+Cell[11648, 287, 3810, 65, 95, "Print",ExpressionUUID->"099f88e7-246e-47a3-9433-a590ca803e72"],
+Cell[15461, 354, 3384, 63, 95, "Print",ExpressionUUID->"9ace68a1-4d83-47cc-a939-5cdb74f2b943"],
+Cell[18848, 419, 2078, 40, 59, "Print",ExpressionUUID->"a5006f05-69ae-4f0d-abf6-48d237c1fbaa"],
+Cell[20929, 461, 945, 20, 22, "Print",ExpressionUUID->"3c94ae83-4c1a-411d-86bc-109557724ba1"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
